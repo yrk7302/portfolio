@@ -1,4 +1,3 @@
-
 body {
   font-family: "Helvetica Neue", sans-serif;
   line-height: 1.8;
@@ -15,6 +14,25 @@ header {
   border-bottom: 1px solid #eee;
 }
 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 header h1 {
   font-size: 1.8rem;
   font-weight: 600;
@@ -22,6 +40,7 @@ header h1 {
 }
 
 section.statement, section.series {
+section.statement, section.series, section.cv, section.contact {
   max-width: 900px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
@@ -61,4 +80,22 @@ footer {
   font-size: 0.85rem;
   color: #555;
   border-top: 1px solid #eee;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
 }
