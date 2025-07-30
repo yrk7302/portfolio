@@ -39,7 +39,6 @@ header h1 {
   letter-spacing: 1px;
 }
 
-section.statement, section.series {
 section.statement, section.series, section.cv, section.contact {
   max-width: 900px;
   margin: 0 auto;
