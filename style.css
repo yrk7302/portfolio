@@ -14,6 +14,17 @@ header {
   border-bottom: 1px solid #eee;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -98,4 +109,27 @@ footer {
 .overlay img {
   max-width: 90%;
   max-height: 90%;
+}
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: none;
+  }
+  nav.open ul {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
 }
