@@ -40,7 +40,7 @@ header h1 {
   letter-spacing: 1px;
 }
 
-section.statement, section.series {
+
 section.statement, section.series, section.cv, section.contact {
   max-width: 900px;
   margin: 0 auto;
@@ -83,20 +83,29 @@ footer {
   border-top: 1px solid #eee;
 }
 
-.overlay {
+.lightbox {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: flex;
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-.overlay img {
-  max-width: 90%;
-  max-height: 90%;
+.lightbox img {
+  max-height: 80vh;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  nav {
+    flex-wrap: wrap;
+  }
+}
 }
