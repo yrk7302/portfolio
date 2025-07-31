@@ -20,6 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.querySelectorAll('.grid video').forEach(video => {
+  video.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    const bigVideo = document.createElement('video');
+    bigVideo.src = video.src;
+    bigVideo.controls = true;
+    bigVideo.autoplay = true;
+    overlay.appendChild(bigVideo);
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', () => overlay.remove());
+  });
+});
+
+
   const slides = document.querySelectorAll('.slideshow img');
   let current = 0;
   if (slides.length) {
