@@ -9,6 +9,16 @@ body {
   color: #111;
 }
 
+a {
+  color: #666;
+  text-decoration: none; /* 下線を消す場合 */
+}
+
+a:hover {
+  color: #000; /* ホバー時に黒くするなど */
+  text-decoration: underline; /* ホバー時に下線を追加する例 */
+}
+
 /* ========= Header ========== */
 header {
   padding: 2rem;
