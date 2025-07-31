@@ -136,6 +136,25 @@ section h2 {
   transform: scale(1.03);
 }
 
+.grid video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.grid video:hover {
+  transform: scale(1.03);
+}
+
+.overlay video {
+  max-width: 90%;
+  max-height: 90%;
+}
+
 /* ========= Modal Overlay ========== */
 .overlay {
   position: fixed;
