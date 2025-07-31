@@ -38,14 +38,14 @@ header h1 {
 }
 
 .sub-name {
-  display: block; /* spanのときだけ必要 */
+  display: block; 
   font-family: 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans', sans-serif;
   font-weight: 100;
   font-size: 1rem;
   color: #555;
   text-align: center;
-  letter-spacing: 0.05em;
-  margin-top: 0.5rem;
+  margin-top: -3rem; 
+  letter-spacing: 0.1em;
 }
 
 /* ========= Navigation ========== */
