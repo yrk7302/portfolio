@@ -37,6 +37,17 @@ header h1 {
   text-transform: uppercase;
 }
 
+.sub-name {
+  display: block; /* spanのときだけ必要 */
+  font-family: 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans', sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+}
+
 /* ========= Navigation ========== */
 .menu-toggle {
   display: none;
