@@ -12,11 +12,14 @@ header {
   text-align: center;
   background: #fff;
   border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 10;
 }
 
 /* slideshow container */
 .slideshow {
   position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 900px;
   margin: 1rem auto;
