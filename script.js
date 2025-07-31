@@ -18,4 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.addEventListener('click', () => overlay.remove());
     });
   });
+
+  // simple slideshow
+  const slides = document.querySelectorAll('.slideshow img');
+  let slideIndex = 0;
+  if (slides.length) {
+    slides[slideIndex].classList.add('active');
+    setInterval(() => {
+      slides[slideIndex].classList.remove('active');
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }, 3000);
+  }
 });
