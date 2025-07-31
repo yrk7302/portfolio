@@ -11,12 +11,12 @@ body {
 
 a {
   color: #666;
-  text-decoration: none; /* 下線を消す場合 */
+  text-decoration: none; 
 }
 
 a:hover {
-  color: #000; /* ホバー時に黒くするなど */
-  text-decoration: underline; /* ホバー時に下線を追加する例 */
+  color: #000; 
+  text-decoration: underline; 
 }
 
 /* ========= Header ========== */
