@@ -114,8 +114,11 @@ section.statement, section.series, section.cv, section.contact {
 }
 
 section h2 {
+ font-family: 'Noto Sans', sans-serif;
+  font-weight: 100;
   font-size: 1.3rem;
-  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   border-left: 4px solid #000;
   padding-left: 10px;
   margin-bottom: 1rem;
