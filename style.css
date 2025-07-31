@@ -1,5 +1,7 @@
+/* ========= Global Base ========== */
 body {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: 'Noto Serif JP', 'Noto Serif TC', 'Noto Serif', serif;
+  font-weight: 400;
   line-height: 1.8;
   margin: 0;
   padding: 0;
@@ -7,6 +9,7 @@ body {
   color: #111;
 }
 
+/* ========= Header ========== */
 header {
   padding: 2rem;
   text-align: center;
@@ -16,39 +19,15 @@ header {
   z-index: 10;
 }
 
-/* slideshow container */
-.slideshow {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 900px;
-  margin: 1rem auto;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
+header h1 {
+  font-family: 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-@supports not (aspect-ratio: 16 / 9) {
-  .slideshow {
-    height: 0;
-    padding-top: 56.25%; /* 16:9 fallback */
-  }
-}
-
-.slideshow img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.slideshow img.active {
-  opacity: 1;
-}
-
+/* ========= Navigation ========== */
 .menu-toggle {
   display: none;
   background: none;
@@ -74,22 +53,29 @@ nav a {
   color: #111;
   text-decoration: none;
   font-weight: bold;
+  font-family: 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans', sans-serif;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
+/* ========= Slideshow ========== */
 .slideshow {
   position: relative;
+  z-index: 1;
   width: 100%;
+  max-width: 900px;
+  margin: 1rem auto;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+@supports not (aspect-ratio: 16 / 9) {
+  .slideshow {
+    height: 0;
+    padding-top: 56.25%;
+  }
 }
 
 .slideshow img {
@@ -97,7 +83,7 @@ header h1 {
   top: 0;
   left: 0;
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 100%;
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease;
@@ -107,14 +93,18 @@ header h1 {
   opacity: 1;
 }
 
-section.statement, section.series, section.cv, section.contact {
+/* ========= Sections ========== */
+section.statement,
+section.series,
+section.cv,
+section.contact {
   max-width: 900px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
 
 section h2 {
- font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans', sans-serif;
   font-weight: 100;
   font-size: 1.3rem;
   letter-spacing: 0.05em;
@@ -124,6 +114,7 @@ section h2 {
   margin-bottom: 1rem;
 }
 
+/* ========= Grid ========== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -136,7 +127,7 @@ section h2 {
   height: auto;
   object-fit: cover;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -145,21 +136,14 @@ section h2 {
   transform: scale(1.03);
 }
 
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.85rem;
-  color: #555;
-  border-top: 1px solid #eee;
-}
-
+/* ========= Modal Overlay ========== */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,10 +155,21 @@ footer {
   max-height: 90%;
 }
 
+/* ========= Footer ========== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  border-top: 1px solid #eee;
+}
+
+/* ========= Responsive (SP) ========== */
 @media (max-width: 768px) {
   header {
     position: relative;
   }
+
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
@@ -183,12 +178,14 @@ footer {
     right: 0;
     background: #fff;
     padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     display: none;
   }
+
   nav.open ul {
     display: flex;
   }
+
   .menu-toggle {
     display: block;
   }
