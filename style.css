@@ -51,6 +51,27 @@ header h1 {
   letter-spacing: 1px;
 }
 
+.slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
 section.statement, section.series, section.cv, section.contact {
   max-width: 900px;
   margin: 0 auto;
