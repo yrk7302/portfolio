@@ -172,7 +172,11 @@ section h2 {
   transform: scale(1.03);
 }
 
-.grid video::after {
+.video-wrapper {
+  position: relative;
+}
+
+.video-wrapper::after {
   content: '▶';
   font-size: 2rem;
   color: white;
@@ -183,6 +187,7 @@ section h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.8; 
   pointer-events: none;
 }
 
